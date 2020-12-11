@@ -1,0 +1,9 @@
+Polymorphism is an important concept of object-oriented programming. It simply means more than one form.
+That is, the same entity (method or operator or object) can perform different operations in different scenarios.
+Polymorphism allows you define one interface and have multiple implementations.
+
+
+Types of Polymorphism
+
+1. Compile Time | Overloading | Static
+2. Run Time | Overriding | Dynamic
