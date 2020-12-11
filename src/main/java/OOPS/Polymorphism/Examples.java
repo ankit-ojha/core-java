@@ -11,13 +11,27 @@ public class Examples {
         // create an object of Language class
         Language l1 = new Language();
         l1.displayInfo();
+
+        Language l2 = new Java();
+        l2.displayInfo();
+
     }
 }
 
 class Language {
-    public void displayInfo() {
+    protected void displayInfo() {
         System.out.println("Common English Language");
     }
+
+    public void sum() {
+
+    }
+
+
+    protected void sum(int a) {
+
+    }
+
 }
 
 class Java extends Language {

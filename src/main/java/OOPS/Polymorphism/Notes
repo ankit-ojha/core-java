@@ -7,3 +7,48 @@ Types of Polymorphism
 
 1. Compile Time | Overloading | Static
 2. Run Time | Overriding | Dynamic
+
+
+Overloading Vs Overriding
+
+1. Compile Time Vs Run Time
+2. Same Class Vs Sub Class
+3. Static Binding (Early Binding) Vs Dynamic Binding (Late Binding)
+4. Static Methods can be overloaded but not overridden
+5. Overloading - Better Performance
+6. private and final methods can be overloaded but not overridden
+7. Argument must be different Vs Arguments must be same
+8. Same return Type Vs Specific (Covariant Return Types)
+9. You can widen the access modifier while overriding (parent class - protected, child class - public)
+10. Type Promotion happens in Overloading (Below runs fine, No Compilation Error)
+
+float to double
+short to int
+
+class Demo{
+   void disp(int a, double b){
+	System.out.println("Method A");
+   }
+   void disp(int a, double b, double c){
+	System.out.println("Method B");
+   }
+   public static void main(String args[]){
+	Demo obj = new Demo();
+	/* I am passing float value as a second argument but
+	 * it got promoted to the type double, because there
+	 * wasn't any method having arg list as (int, float)
+	 */
+	obj.disp(100, 20.67f);
+   }
+}
+
+
+11. Overloading
+A. Number of Arguments
+B. Order of Arguments
+C. Data Types of Arguments
+
+12. More than one method with same name and argument list cannot be given in a class even though their return type is different.
+Method return type does not matter in case of overloading.
+
+13.
