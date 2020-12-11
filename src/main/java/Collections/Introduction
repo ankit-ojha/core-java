@@ -1,0 +1,9 @@
+- The Java collections framework provides a set of interfaces and classes to implement various data structures and algorithms.
+- Collection is an interface and Collections is a class
+- Set, List and Queue (SLQ) are sub-interfaces of Collection Interface
+- Collection Interface itself extends Iterables interface
+
+
+References
+- https://beginnersbook.com/java-collections-tutorials/
+-

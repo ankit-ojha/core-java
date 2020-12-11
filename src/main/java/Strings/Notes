@@ -1,0 +1,144 @@
+String s1="Welcome";
+String s2="Welcome";//It doesn't create a new instance
+In the above example, only one object will be created.
+Firstly, JVM will not find any string object with the value "Welcome" in string constant pool,
+that is why it will create a new object. After that it will find the string with the value "Welcome" in the pool,
+it will not create a new object but will return the reference to the same instance.
+
+> ONE OBJECT (String Constant Pool) & ONE REFERENCE VARIABLE
+
+Example 2:
+String s=new String("Welcome");//creates two objects and one reference variable
+In such case, JVM will create a new string object in normal (non-pool) heap memory,
+and the literal "Welcome" will be placed in the string constant pool.
+The variable s will refer to the object in a heap (non-pool).
+
+> TWO OBJECTS (String Constant Pool and HEAP Memory) & ONE REFERENCE VARIABLE (refers to HEAP memory)
+
+Examples 3:
+String str1 = new String("abc")
+String str2 = "abc"
+
+> str1 = 2 (String Constant Pool and Heap), str2 = 0 (Total 2)
+
+Examples 4:
+String str1 = "abc"
+String str2 = "abc"
+
+> str1 = 1 (String Constant Pool), str2 = 0 (Total 1)
+
+Examples 5:
+String str1 = "abc"
+String str2 = new String("abc")
+
+> str1 = 1 (String Constant Pool), str2 = 1 (Heap) (Total 2)
+
+Examples 5:
+String str1 = new String("abc")
+String str2 = new String("abc")
+
+> str1 = 2 (String Constant Pool and Heap), str2 = 1 (Heap) (Total 3)
+
+----------------------------------------------- IMMUTABLE  -------------------------------------------------------------
+
+- Immutable simply means unmodifiable or unchangeable.
+- Once string object is created its data or state can't be changed but a new string object is created.
+    String s="Ankit";
+    s.concat(" Ojha"); //concat() method appends the string at the end
+    System.out.println(s);//will print Ankit because strings are immutable objects
+- In the above example, 2 string objects are created. Ankit and Ankit Ojha. As it was a literal, both were created in String Constant Pool
+
+- The string is Immutable in Java because String objects are cached in the String pool.
+Since cached String literals are shared between multiple clients there is always a risk, where one client's action would affect all another client.
+For example, if one client changes the value of the String "Test" to "TEST", all other clients will also see that value as explained in the first example.
+Since caching of String objects was important from performance reason this risk was avoided by making String class Immutable.
+At the same time, String was made final so that no one can compromise invariant of String class like Immutability, Caching, hashcode calculation, etc
+by extending and overriding behaviors.
+
+----------------------------------------------- String Constant Pool  --------------------------------------------------
+
+- Java String Pool is the special memory region where Strings.Strings are stored by the JVM.
+- It is inside the heap space
+- Since Strings.Strings are immutable in Java, the JVM optimizes the amount of memory allocated for them by storing only one copy of each literal String in the pool.
+This process is called interning:
+- When we create a String via the new operator, the Java compiler will create a new object and store it in the heap space reserved for the JVM.
+
+----------------------------------------------- String Comparison  -----------------------------------------------------
+
+equals(), compareTo() and ==
+
+1. The String equals() method compares the original content of the string. It compares values of string for equality.
+2. The = = operator compares references not values.
+3. compareTo() method compares values lexicographically and returns an integer value that describes if first string is less than, equal to or greater than second string.
+
+It is used in authentication (by equals() method), sorting (by compareTo() method), reference matching (by == operator)
+
+
+
+----------------------------------------------- String Buffer/Builder  -------------------------------------------------
+
+- String Buffer & Builder are mutable strings and implements the same interfaces as String class
+- They are also final classes
+- Use String Buffer in multi thread environment, else use String Builder for String manipulation
+
+Buffer Vs Builder Vs String
+- Thread Safe Vs Not Vs Not
+- Synchronized Vs Not Vs Not
+- Slow Vs Fast Vs Slowest (as it creates new instance each time you perform any manipulation)
+- Mutable Vs Mutable Vs Immutable
+- 1 way to create (using new) Vs 1 way to create (using new) Vs 2 ways to create (literal and new)
+- Heap Vs Heap Vs (String Constant Pool and Heap) *Depends if new is used to create String
+
+------------------------------------------------MISC --------------------------------------------------------------
+
+1. toString() - Represents any object as String
+If you print any object, java compiler internally invokes the toString() method on the object.
+So overriding the toString() method, returns the desired output,
+
+2. String Tokenizer
+- Breaks the string into tokens
+- 3 constructor
+A. StringTokenizer(String str)
+B. StringTokenizer(String str, String delim)
+C. StringTokenizer(String str, String delim, boolean returnValue) If return value is true, delimiter characters are considered to be tokens. If it is false, delimiter characters serve to separate tokens.
+
+3. Intern
+String object in the string constant pool is called as String Intern.
+You can create an exact copy of heap memory string object in string constant pool.
+This process of creating an exact copy of heap memory string object in the string constant pool is called interning.
+intern() method is used for interning.
+
+
+
+
+
+
+
+-----------------------------------------------Introduction ------------------------------------------------------------
+
+
+- String is an object (in Java) that represents sequence of character values
+- String is a final class and immutable
+- It cannot be inherited, and once created, we can not alter the object.
+- A String is a derived type since it has state and behavior. For example, it has methods like substring(), indexOf(), and equals(), which primitives cannot have.
+- public final class String implements java.io.Serializable, Comparable<String>, CharSequence
+- The CharSequence interface is used to represent the sequence of characters.
+String, StringBuffer and StringBuilder classes implement it. It means, we can create strings in java by using these three classes.
+- The Java String is immutable which means it cannot be changed. Whenever we change any string, a new instance is created.
+For mutable strings, you can use StringBuffer and StringBuilder classes.
+
+
+-----------------------------------------------Creating a String & Memory Allocation  ----------------------------------
+-
+- String objects are stored in a special memory area known as the "string constant pool".
+
+- Strings.Strings can be created using 2 ways
+1. String literal (String s="welcome";)
+2. new keyword
+
+- When we create a String object using the new() operator, it always creates a new object in heap memory.
+On the other hand, if we create an object using String literal syntax e.g. “Baeldung”, it may return an existing object from the String pool, if it already exists.
+Otherwise, it will create a new String object and put in the string pool for future re-use.
+
+Example 1:
+

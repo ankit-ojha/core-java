@@ -1,4 +1,4 @@
 package Collections.List;
 
-public class ArrayListExamples {
+public class LinkedListExamples {
 }

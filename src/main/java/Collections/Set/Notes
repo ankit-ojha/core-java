@@ -1,0 +1,63 @@
+A Set is a Collection that cannot contain duplicate elements.
+There are three main implementations of Set interface: HashSet, TreeSet, and LinkedHashSet
+HashSet, which stores its elements in a hash table, is the best-performing implementation; however it makes no guarantees concerning the order of iteration.
+TreeSet, which stores its elements in a red-black tree, orders its elements based on their values;it is substantially slower than HashSet.
+LinkedHashSet, which is implemented as a hash table with a linked list running through it, orders its elements based on the order in which they were inserted into the set (insertion-order).
+
+
+--------------------------------------------- HASHSET ------------------------------------------------------------------
+
+1. Synchronization
+
+All 3 are not synchronized. It should not be used in multi threaded application
+
+Set s = Collections.synchronizedSet(new HashSet(...));
+Set s = Collections.synchronizedSet(new LinkedHashSet(...));
+Set s = Collections.synchronizedSet(new TreeSet(...));
+
+2. Ordering
+
+HashSet - No Order
+LinkedHashSet - Insertion Order
+TreeSet - Natural Ordering using compareTo(), and Custom Ordering using compare()
+
+3. Null Values
+
+HashSet - 1 null is allowed
+LinkedHashSet - 1 null is allowed
+TreeSet - nulls are not allowed
+
+4. Storing
+
+HashSet - Uses HashMap
+LinkedHashSet - Uses LinkedHashMap
+TreeSet - uses NavigableMap
+
+5. Iterator
+
+Iterator returned by all three Set implementations are fail-fast,
+which means if you modify collection once iteration begins i.e. add or delete elements without using Iterator's remove method,
+it will throw ConcurrentModificationException.
+Also Iterator of HashSet doesn't guarantee any order, while Iterator of LinkedHashSet let you iterate in the order elements are added
+
+6. Performance
+
+HashSet > LinkedHashSet > TreeSet
+No Order | Overhead of maintaining double linked list | Sort everytime there is a change
+O(1) | O(1) | O(log(n))
+
+7. Compare
+
+HashSet - equals() and hashCode()
+LinkedHashSet - equals() and hashCode()
+TreeSet - compare() & compareTo()
+
+
+When to use What:
+You should use HashSet for general purpose Set requirement,
+where you need to store only unique elements without any sorting or ordering requirement,
+if you need to maintain the order on which elements are added into Set, apart from guarantee of unique elements, use LinkedHashSet.
+If you need to keep your elements in a particular sorting order use TreeSet,
+you can either keep elements in their natural order or you can customize their sorting order by providing a Comparator e.g. keeping notes in increasing order of their value.
+
+

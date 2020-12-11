@@ -1,0 +1,39 @@
+An exception is an unexpected event that occurs during program execution.
+It affects the flow of the program instructions which can cause the program to terminate abnormally.
+An exception can occur for many reasons. Some of them are:
+
+Invalid user input
+Device failure
+Loss of network connection
+Physical limitations (out of disk memory)
+Code errors
+Opening an unavailable file
+
+Throwable is the root class which splits into Error and Exception
+
+Errors represent irrecoverable conditions such as Java virtual machine (JVM) running out of memory, memory leaks, stack overflow errors, library incompatibility, infinite recursion, etc.
+Errors are usually beyond the control of the programmer and we should not try to handle errors.
+
+Exceptions can be caught and handled by the program.
+When an exception occurs within a method, it creates an object. This object is called the exception object.
+It contains information about the exception such as the name and description of the exception and state of the program when the exception occurred.
+
+Exception Types
+1. UnChecked Exceptions a.k.a RunTimeException | Programming Error | NPE, IllegalArguments, ArithmeticException, ArrayIndexOutOfBoundException
+2. Checked Exceptions a.k.a IOException | Checked by Compiler and notified to Developer | FileNotFoundException
+
+
+Handling Exception
+- try...catch block | multiple catch possible |
+- finally (always executed whether there is exception or not) (only finally block per try..catch block) (cleanup code, close the connection, etc)
+- throw/throws
+
+throw is used to explicitly throw a single exception
+throws is used in the method declaration
+throws can be used for multiple exceptions
+
+
+
+
+
+

@@ -1,0 +1,22 @@
+- Objects have two characteristics: They have states and behaviors.
+Example:
+Object: House
+State: Address, Color, Area
+Behavior: Open door, close door
+
+- Creating an object
+1. new keyword
+2. newInstance()
+3. clone()
+4. deserialization
+5. factory method
+
+
+- Object is an instance of a class
+- A class is a logical entity that can be considered as a template/blueprint using which you can create as many objects as you like.
+- A class is a blueprint for the object. Before we create an object, we first need to define the class.
+- We can think of the class as a sketch (prototype) of a house.
+It contains all the details about the floors, doors, windows, etc. Based on these descriptions we build the house. House is the object.
+Since many houses can be made from the same description, we can create many objects from a class.
+
+-

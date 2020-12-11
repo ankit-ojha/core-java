@@ -1,0 +1,95 @@
+Java Autoboxing - Primitive Type to Wrapper Object
+Java Unboxing - Wrapper Objects to Primitive Types
+// autoboxing
+Integer aObj = 56;
+
+// unboxing
+int a = aObj;
+------------------------------------------------------------------------------------------------------------------------
+
+JVM(Java Virtual Machine) is an abstract machine that allows computer to run Java Programs
+When running a program, Java Compilers compiles the java code to byte code
+JVM then translates the byte code to machine code
+Since JVM executes the Java Byte Code which platform independent, hence Java is also platform independent
+
+------------------------------------------------------------------------------------------------------------------------
+
+JRE (Java Runtime Environment) is a software package that provides
+Java class libraries, Java Virtual Machine (JVM), and other components that are required to run Java applications.
+
+JRE is a superset of JVM
+JRE = JVM + Class Libraries
+
+If you want to run Java Programs and not develop them, JRE is what you need.
+
+------------------------------------------------------------------------------------------------------------------------
+
+JDK (Java Development Kit) is a software development kit required to develop applications in Java.
+When you download JDK, JRE is also downloaded with it.
+
+JDK = JRE (JVM + Class Libraries) + Compilers + Debuggers + JavaDoc
+
+------------------------------------------------------------------------------------------------------------------------
+
+There are 8 primitive data types
+boolean (true and false, DF=false), byte (-128 to 127, DF=0), short (-32768 to 32767, DF=0), int (-2 power 31 to 2 power 32-1, DF=0), long (-2 power 63 to 2 power 63-1, DF=0), float (32 bit, default = 0.0f), double (64 bit, default = 0.0d), char
+
+------------------------------------------------------------------------------------------------------------------------
+
+Operators
+
+1. Arithmetic
+2. Assignment
+3. Relational
+4. Unary
+5. Logical
+6. Bitwise
+
+
+instance of, ternary
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+- Every class has a constructor whether it’s a normal class or a abstract class.
+- Constructors are not methods and they don’t have any return type.
+- Constructor name should match with class name .
+- Constructor can use any access specifier, they can be declared as private also. Private constructors are possible in java but there scope is within the class only.
+- Like constructors, method can also have name same as class name, but still they have return type, though which we can identify them that they are methods not constructors.
+- If you don’t implement any constructor within the class, compiler will do it for.
+- this() and super() should be the first statement in the constructor code. If you don’t mention them, compiler does it for you accordingly.
+- Constructor overloading is possible but overriding is not possible. Which means we can have overloaded constructor in our class but we can’t override a constructor.
+- Constructors can not be inherited.
+- If Super class does not have a no-arg(default) constructor then compiler would not insert a default constructor in child class as it does in normal scenario.
+- Interfaces do not have constructors.
+- Abstract class can have constructor and it gets invoked when a class, which implements interface, is instantiated. (i.e. object creation of concrete class).
+- A constructor can also invoke another constructor of the same class – By using this(). If you want to invoke a parameterized constructor then do it like this: this(parameter list).
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------
+

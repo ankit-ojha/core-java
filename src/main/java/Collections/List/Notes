@@ -1,0 +1,79 @@
+A List is an ordered Collection (sometimes called a sequence).
+Lists may contain duplicate elements.
+Elements can be inserted or accessed by their position in the list, using a zero-based index.
+
+--------------------------------------------ARRAYLIST-------------------------------------------------------------------
+
+- ArrayList is a class that implements List interface
+- ArrayList size can grow and shrink dynamically, hence it has advantage over Arrays
+- It uses an array to implement a list, hence the name arraylist
+- Sorting of ArrayList<Object> is done using Comparable Interface (implements Comparable interface and override compareTo() and toString())
+- ArrayList are not thread-safe and should not be used in the multi threaded environment
+- Two ways to apply synchronization
+1. List<String> syncal = Collections.synchronizedList(new ArrayList<String>());
+    synchronized(syncal) {
+           Iterator<String> iterator = syncal.iterator();
+           while (iterator.hasNext())
+              System.out.println(iterator.next());
+           }
+2. CopyOnWriteArrayList : thread-safe variant of ArrayList
+CopyOnWriteArrayList<String> al = new CopyOnWriteArrayList<String>();
+
+- Swapping using Collections.swap(l1, 1, 5);
+- ArrayList is Serializable by default
+- Combine two arraylist using addAll
+- Cloning is done using clone()    a2 = a1.clone() a2 will not get affected even if a1 elements are altered
+- Empty using clear()/removeAll() : a1.clear();
+- Check if a list if empty using isEmpty()
+- ensureCapacity(10) to increase the capacity of ArrayList
+- Length of ArrayList using size()
+
+
+--------------------------------------------LINKED LIST-----------------------------------------------------------------
+
+- LinkedList is a linear data structure
+- It extends both List & Queue
+- They are not stored as Arrays, they are linked with each other using pointers
+- Each element of the LinkedList has a reference (address/pointers) to the next element of the linked list
+- Each element is called a node. A node has 2 information (Contents of the element and address/reference/pointers to next node
+- Last node points to null as an address/reference
+- Head of the LinkedList only contains the Address of the First element of the List.
+- Doubly linked list contains 3 parts. It has address of the last and the next node, in addition to its own content
+- It allows dynamic memory allocation
+- Looping same way (4 ways) as ArrayList
+- ListIterator listIt = linkedlist.listIterator(); (Ensure both direction iterating using hasNext()/next() and hasPrevious()/previous())
+- Convert a LinkedList to ArrayList using  List<String> list = new ArrayList<String>(linkedlist);
+- Convert a LinkedList to Array using String[] array = linkedlist.toArray(new String[linkedlist.size()]);
+- push("element"): insert an element at the front of the list [list.push("NEW ELEMENT");]
+- pop(): remove an element and returns the element [list.pop()]
+- peek : Retrieves, but does not remove, the head (first element) of this list.
+- peekFirst(): Retrieves, but does not remove, the first element of this list, or returns null if this list is empty.
+- peekLast(): Retrieves, but does not remove, the last element of this list, or returns null if this list is empty.
+- poll() - Same as peek but it removes
+
+
+---------------------------------- ArrayList Vs LinkedList -------------------------------------------------------------
+
+1. Search
+ArrayList is faster O(1) than LinkedList O(n) as ArrayList maintains an index based search using array data structure implicitly.
+LinkedList implements doubly linked list which requires traversal through all the elements for searching an element
+
+2. Deletion
+LinkedList is faster than ArrayList [Best Case O(1) when removing last element and Worst case O(n) for removing first element]
+As ArrayList needs to be shifted to fill out the space created by deleted element
+LinkedList only requires to change the address of two neighbouring elements. Hence it's faster
+
+3. Insertion
+Same as Deletion
+
+4. Memory
+High in linkedlist as it contains element data and two pointers for neighbour nodes
+
+LinkedList should be used when you want to perform data manipulation, while ArrayList should be used when you want to store the data and access it
+
+
+-------------------------------------------- REFERENCES ----------------------------------------------------------------
+
+https://www.baeldung.com/java-arraylist-linkedlist
+https://www.geeksforgeeks.org/arraylist-vs-linkedlist-java/
+https://beginnersbook.com/2013/12/difference-between-arraylist-and-linkedlist-in-java/

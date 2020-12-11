@@ -1,2 +1,4 @@
-package Collections.Map;public class Iterator {
+package Collections.Map;
+
+public class Iterator {
 }

@@ -1,0 +1,41 @@
+HashMap is a Map based collection class that is used for storing Key & value pairs, it is denoted as HashMap<Key, Value> or HashMap<K, V>.
+This class makes no guarantees as to the order of the map.
+It is similar to the Hashtable class except that it is un-synchronized and permits nulls(null values and null key).
+
+Iterator
+--------
+1. While Loop + Iterator
+2. For Loop
+
+HashMap<Integer, String> hmap = new HashMap<Integer, String>();
+Set set = hmap.entrySet();
+Iterator iterator = set.iterator();
+while(iterator.hasNext()) {
+ Map.Entry mentry = (Map.Entry)iterator.next();
+ System.out.print("key is: "+ mentry.getKey() + " & Value is: ");
+ System.out.println(mentry.getValue());
+}
+
+----------------------------------------------------
+
+for (Map.Entry me : hmap.entrySet()) {
+System.out.println("Key: "+me.getKey() + " & Value: " + me.getValue());
+}
+
+----------------------------------------------------
+
+
+Sorting
+
+1. by keys using TreeMap
+2. by values using Comparator
+
+---------------------------------------- HASHTABLE ---------------------------------------------------------------------
+
+- It is similar to HashMap except it is synchronized
+- The thread which works on Hashtable acquires a lock on it to make the other threads wait till its work gets completed.
+- Hashtable does not allow null keys and null values.
+- Hashtable does not guarantee any kind of order.
+- Enumerator for the Hashtable is not fail-fast.
+fail-fast means: When calling iterator.next(), if any modification has been made between the moment the iterator was created and the moment next() is called, a ConcurrentModificationException is immediately thrown.
+
