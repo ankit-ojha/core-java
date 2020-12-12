@@ -19,4 +19,4 @@ Behavior: Open door, close door
 It contains all the details about the floors, doors, windows, etc. Based on these descriptions we build the house. House is the object.
 Since many houses can be made from the same description, we can create many objects from a class.
 
--
+

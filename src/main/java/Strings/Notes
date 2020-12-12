@@ -1,3 +1,32 @@
+-----------------------------------------------Introduction ------------------------------------------------------------
+
+
+
+- String is an object (in Java) that represents sequence of character values
+- String is a final class and immutable
+- It cannot be inherited, and once created, we can not alter the object.
+- A String is a derived type since it has state and behavior. For example, it has methods like substring(), indexOf(), and equals(), which primitives cannot have.
+- public final class String implements java.io.Serializable, Comparable<String>, CharSequence
+- The CharSequence interface is used to represent the sequence of characters.
+String, StringBuffer and StringBuilder classes implement it. It means, we can create strings in java by using these three classes.
+- The Java String is immutable which means it cannot be changed. Whenever we change any string, a new instance is created.
+For mutable strings, you can use StringBuffer and StringBuilder classes.
+
+
+-----------------------------------------------Creating a String & Memory Allocation  ----------------------------------
+-
+- String objects are stored in a special memory area known as the "string constant pool".
+
+- Strings.Strings can be created using 2 ways
+1. String literal (String s="welcome";)
+2. new keyword
+
+- When we create a String object using the new() operator, it always creates a new object in heap memory.
+On the other hand, if we create an object using String literal syntax e.g. “Baeldung”, it may return an existing object from the String pool, if it already exists.
+Otherwise, it will create a new String object and put in the string pool for future re-use.
+
+Example 1:
+
 String s1="Welcome";
 String s2="Welcome";//It doesn't create a new instance
 In the above example, only one object will be created.
@@ -106,39 +135,4 @@ C. StringTokenizer(String str, String delim, boolean returnValue) If return valu
 String object in the string constant pool is called as String Intern.
 You can create an exact copy of heap memory string object in string constant pool.
 This process of creating an exact copy of heap memory string object in the string constant pool is called interning.
-intern() method is used for interning.
-
-
-
-
-
-
-
------------------------------------------------Introduction ------------------------------------------------------------
-
-
-- String is an object (in Java) that represents sequence of character values
-- String is a final class and immutable
-- It cannot be inherited, and once created, we can not alter the object.
-- A String is a derived type since it has state and behavior. For example, it has methods like substring(), indexOf(), and equals(), which primitives cannot have.
-- public final class String implements java.io.Serializable, Comparable<String>, CharSequence
-- The CharSequence interface is used to represent the sequence of characters.
-String, StringBuffer and StringBuilder classes implement it. It means, we can create strings in java by using these three classes.
-- The Java String is immutable which means it cannot be changed. Whenever we change any string, a new instance is created.
-For mutable strings, you can use StringBuffer and StringBuilder classes.
-
-
------------------------------------------------Creating a String & Memory Allocation  ----------------------------------
--
-- String objects are stored in a special memory area known as the "string constant pool".
-
-- Strings.Strings can be created using 2 ways
-1. String literal (String s="welcome";)
-2. new keyword
-
-- When we create a String object using the new() operator, it always creates a new object in heap memory.
-On the other hand, if we create an object using String literal syntax e.g. “Baeldung”, it may return an existing object from the String pool, if it already exists.
-Otherwise, it will create a new String object and put in the string pool for future re-use.
-
-Example 1:
-
+intern() method is used for interning

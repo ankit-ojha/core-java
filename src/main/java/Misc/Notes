@@ -49,7 +49,7 @@ Operators
 instance of, ternary
 
 
-------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------CONSTRUCTOR--------------------------------------------------------------
 
 - Every class has a constructor whether it’s a normal class or a abstract class.
 - Constructors are not methods and they don’t have any return type.
@@ -65,31 +65,51 @@ instance of, ternary
 - Abstract class can have constructor and it gets invoked when a class, which implements interface, is instantiated. (i.e. object creation of concrete class).
 - A constructor can also invoke another constructor of the same class – By using this(). If you want to invoke a parameterized constructor then do it like this: this(parameter list).
 
+- this() is used to call current class constructor while super() is used to call Base/Parent class constructor
+- this()/super() must be on the first line. If it is not written explicitly, compiler will add super()
+- We can either use this() or super(), but not both in the same constructor (Compile Error)
+- this/super can be used to call methods this.run()/super.run()
+
+
+
+------------------------------------------ GARBAGE COLLECTION ----------------------------------------------------------
+
+The process of removing unused objects from heap memory is known as Garbage collection and this is a part of memory management in Java.
+'Garbage Collector' is best example of daemon thread as it is always running in the background
+Main objective is to free up heap memory by destroying unreachable objects
+Just before destroying an object, Garbage Collector calls finalize() method on the object to perform cleanup activities.
+Once finalize() method completes, Garbage Collector destroys that object.
+GC collects only those objects which are created by new keyword
+
+
+When?
+1. When object is no longer reachable
+Student student = new Student();
+student = null;
+
+2. When one reference is copied to another reference
+Student student1 = new Student();
+Student student2 = new Student();
+student1 = student2;
+
+3. Anonymous Objects
+new Student();
+
+How?
+
+1. Explicit (There is no guarantee that GC will run)
+System.gc()
+Runtime.getRuntime().gc()
+
+2. Implicit
+Automatically
 
 ------------------------------------------------------------------------------------------------------------------------
 
+Association of method call to the method body is known as binding.
+Two Types
+1. Static or Early or Compile Time Binding
+2. Dynamic or Late or Run Time Binding
 
-------------------------------------------------------------------------------------------------------------------------
-
-------------------------------------------------------------------------------------------------------------------------
-
-------------------------------------------------------------------------------------------------------------------------
-
-------------------------------------------------------------------------------------------------------------------------
-
-------------------------------------------------------------------------------------------------------------------------
-------------------------------------------------------------------------------------------------------------------------
-------------------------------------------------------------------------------------------------------------------------
-
-------------------------------------------------------------------------------------------------------------------------
-
-------------------------------------------------------------------------------------------------------------------------
-
-------------------------------------------------------------------------------------------------------------------------
-
-------------------------------------------------------------------------------------------------------------------------
-
-------------------------------------------------------------------------------------------------------------------------
-------------------------------------------------------------------------------------------------------------------------
-------------------------------------------------------------------------------------------------------------------------
-
+Binding of static, private and final methods is compile time binding (as these methods cannot be overridden) (overloading is an example)
+When compiler is not able to resolve the call/binding at compile time, such binding is known as Dynamic or late Binding. (method overriding is an example)
