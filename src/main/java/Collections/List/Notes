@@ -67,7 +67,7 @@ LinkedList only requires to change the address of two neighbouring elements. Hen
 Same as Deletion
 
 4. Memory
-High in linkedlist as it contains element data and two pointers for neighbour nodes
+High in LinkedList as it contains element data and two pointers for neighbour nodes
 
 LinkedList should be used when you want to perform data manipulation, while ArrayList should be used when you want to store the data and access it
 

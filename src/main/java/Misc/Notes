@@ -53,7 +53,7 @@ instance of, ternary
 
 - Every class has a constructor whether it’s a normal class or a abstract class.
 - Constructors are not methods and they don’t have any return type.
-- Constructor name should match with class name .
+- Constructor name should match with class name.
 - Constructor can use any access specifier, they can be declared as private also. Private constructors are possible in java but there scope is within the class only.
 - Like constructors, method can also have name same as class name, but still they have return type, though which we can identify them that they are methods not constructors.
 - If you don’t implement any constructor within the class, compiler will do it for.
@@ -69,8 +69,6 @@ instance of, ternary
 - this()/super() must be on the first line. If it is not written explicitly, compiler will add super()
 - We can either use this() or super(), but not both in the same constructor (Compile Error)
 - this/super can be used to call methods this.run()/super.run()
-
-
 
 ------------------------------------------ GARBAGE COLLECTION ----------------------------------------------------------
 

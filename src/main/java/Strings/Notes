@@ -1,7 +1,5 @@
 -----------------------------------------------Introduction ------------------------------------------------------------
 
-
-
 - String is an object (in Java) that represents sequence of character values
 - String is a final class and immutable
 - It cannot be inherited, and once created, we can not alter the object.
@@ -12,9 +10,7 @@ String, StringBuffer and StringBuilder classes implement it. It means, we can cr
 - The Java String is immutable which means it cannot be changed. Whenever we change any string, a new instance is created.
 For mutable strings, you can use StringBuffer and StringBuilder classes.
 
-
 -----------------------------------------------Creating a String & Memory Allocation  ----------------------------------
--
 - String objects are stored in a special memory area known as the "string constant pool".
 
 - Strings.Strings can be created using 2 ways
@@ -22,7 +18,7 @@ For mutable strings, you can use StringBuffer and StringBuilder classes.
 2. new keyword
 
 - When we create a String object using the new() operator, it always creates a new object in heap memory.
-On the other hand, if we create an object using String literal syntax e.g. “Baeldung”, it may return an existing object from the String pool, if it already exists.
+On the other hand, if we create an object using String literal syntax e.g. “Ankit”, it may return an existing object from the String pool, if it already exists.
 Otherwise, it will create a new String object and put in the string pool for future re-use.
 
 Example 1:
@@ -86,9 +82,9 @@ by extending and overriding behaviors.
 
 ----------------------------------------------- String Constant Pool  --------------------------------------------------
 
-- Java String Pool is the special memory region where Strings.Strings are stored by the JVM.
+- Java String Pool is the special memory region where Strings are stored by the JVM.
 - It is inside the heap space
-- Since Strings.Strings are immutable in Java, the JVM optimizes the amount of memory allocated for them by storing only one copy of each literal String in the pool.
+- Since Strings are immutable in Java, the JVM optimizes the amount of memory allocated for them by storing only one copy of each literal String in the pool.
 This process is called interning:
 - When we create a String via the new operator, the Java compiler will create a new object and store it in the heap space reserved for the JVM.
 
@@ -122,7 +118,7 @@ Buffer Vs Builder Vs String
 
 1. toString() - Represents any object as String
 If you print any object, java compiler internally invokes the toString() method on the object.
-So overriding the toString() method, returns the desired output,
+So overriding the toString() method, returns the desired output
 
 2. String Tokenizer
 - Breaks the string into tokens

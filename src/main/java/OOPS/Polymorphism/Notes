@@ -50,5 +50,3 @@ C. Data Types of Arguments
 
 12. More than one method with same name and argument list cannot be given in a class even though their return type is different.
 Method return type does not matter in case of overloading.
-
-13.
