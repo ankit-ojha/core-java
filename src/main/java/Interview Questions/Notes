@@ -1,0 +1,33 @@
+- Java is not 100% Object-oriented because it makes use of eight primitive data types such as boolean, byte, char, int, float, double, long, short
+which are not objects.
+
+- Singleton class is a class whose only one instance can be created at any given time, in one JVM.
+A class can be made singleton by making its constructor private.
+
+- The Java ClassLoader is a subset of JVM (Java Virtual Machine) that is responsible for loading the class files.
+Whenever a Java program is executed it is first loaded by the classloader. Java provides three built-in classloaders:
+
+  Bootstrap ClassLoader
+  Extension ClassLoader
+  System/Application ClassLoader
+
+- A Marker interface can be defined as the interface having no data member and member functions.
+In simpler terms, an empty interface is called the Marker interface. The most common examples of Marker interface in Java are Serializable, Cloneable etc.
+Marker interface is used as a tag to inform a message to the Java compiler so that it can add special behaviour to the class implementing it.
+Java marker interface has no members in it.
+From java 1.5, the need for marker interface is eliminated by the introduction of the java annotation feature.
+
+
+
+
+
+
+
+
+
+
+
+
+
+https://www.journaldev.com/2366/core-java-interview-questions-and-answers
+https://www.edureka.co/blog/interview-questions/java-interview-questions/
