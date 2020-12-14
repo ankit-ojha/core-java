@@ -1,4 +1,7 @@
 ------------------------------------------------------------------------------------------------------------------------
+- Abstraction is a process where you show only “relevant” data and “hide” unnecessary details of an object from the user.
+For example, when you login to your bank account online, you enter your user_id and password and press login,
+what happens when you press login, how the input data sent to server, how it gets verified is all abstracted away from the you.
 - abstract meaning - existing in thought or as an idea but not having a physical or concrete existence.
 - Abstraction is a process of hiding the implementation details and showing only functionality to the user.
 - In Java, abstraction is achieved by interfaces and abstract classes. We can achieve 100% abstraction using interfaces.
@@ -16,6 +19,11 @@
 8. If a class has at least one abstract methods, then the class must be declared as abstract
 9. If you inherit an abstract class, you must provide implementations to abstract methods
 10. Abstract Class cannot be private, static and final, as final class cannot be extended which defeats the purpose of abstraction
+11. These cannot be abstract
+    Constructors
+    Static methods
+    Private methods
+    Methods that are declared “final”
 
 Why can’t we create the object of an abstract class?
 - Because these classes are incomplete, they have abstract methods that have no body so if java allows you to create object of this class
@@ -41,6 +49,3 @@ https://javabypatel.blogspot.com/2017/07/real-time-example-of-abstract-class-and
 - Abstract class is used when you know partial implementation, where say out of 5 methods,
 you know implementation of 3 methods and don't know implementation of 2 methods in that case 2 methods will be abstract
 and you need to rely on implementer as a contract to must provide body of abstract methods to accomplish the task.
-
-
-
