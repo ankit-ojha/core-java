@@ -2,8 +2,14 @@ Polymorphism is an important concept of object-oriented programming. It simply m
 That is, the same entity (method or operator or object) can perform different operations in different scenarios.
 Polymorphism allows you define one interface and have multiple implementations.
 
+Example:
 
-Types of Polymorphism
+A person at the same time can have different characteristic.
+Like a man at the same time is a father, a husband, an employee.
+So the same person posses different behavior in different situations. This is called polymorphism.
+
+
+Types of Polymorphism:
 
 1. Compile Time | Overloading | Static
 2. Run Time | Overriding | Dynamic
@@ -14,6 +20,7 @@ Overloading Vs Overriding
 1. Compile Time Vs Run Time
 2. Same Class Vs Sub Class
 3. Static Binding (Early Binding) Vs Dynamic Binding (Late Binding)
+Overriding: JVM determines the proper method to call at the runtime, not at the compile time. It is also called dynamic or late binding.
 4. Static Methods can be overloaded but not overridden
 5. Overloading - Better Performance
 6. private and final methods can be overloaded but not overridden
@@ -42,11 +49,12 @@ class Demo{
    }
 }
 
-
-11. Overloading
+11. Resolved by Compiler Vs Resolved by JVM
+12. Fast Vs Slow
+13. Overloading
 A. Number of Arguments
 B. Order of Arguments
 C. Data Types of Arguments
 
-12. More than one method with same name and argument list cannot be given in a class even though their return type is different.
+14. More than one method with same name and argument list cannot be given in a class even though their return type is different.
 Method return type does not matter in case of overloading.
