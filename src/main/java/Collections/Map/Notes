@@ -30,6 +30,67 @@ Sorting
 1. by keys using TreeMap
 2. by values using Comparator
 
+HashMap:
+
+HashMap offers 0(1) lookup and insertion.
+If you iterate through the keys, though, the ordering of the keys is essentially arbitrary.
+It is implemented by an array of linked lists.
+
+Syntax:
+public class HashMap extends AbstractMap implements Map,Cloneable, Serializable
+
+A HashMap contains values based on the key.
+- It contains only unique elements.
+- It may have one null key and multiple null values.
+- It maintains no order.
+
+LinkedHashMap:
+
+LinkedHashMap offers 0(1) lookup and insertion.
+Keys are ordered by their insertion order.
+It is implemented by doubly-linked buckets.
+
+Syntax:
+
+public class LinkedHashMap extends HashMap implements Map
+
+A LinkedHashMap contains values based on the key.
+- It contains only unique elements.
+- It may have one null key and multiple null values.
+- It is same as HashMap instead maintains insertion order.
+
+
+TreeMap:
+TreeMap offers O(log N) lookup and insertion.
+Keys are ordered, so if you need to iterate through the keys in sorted order, you can.
+This means that keys must implement the Comparable interface.
+TreeMap is implemented by a Red-Black Tree.
+
+Syntax:
+public class TreeMap extends AbstractMap implements NavigableMap, Cloneable, Serializable
+
+A TreeMap contains values based on the key. It implements the NavigableMap interface and extends AbstractMap class.
+It contains only unique elements.
+It cannot have null key but can have multiple null values.
+It is same as HashMap instead maintains ascending order(Sorted using the natural order of its key).
+
+
+Hashtable:
+
+“Hashtable” is the generic name for hash-based maps.
+
+Syntax:
+public class Hashtable extends Dictionary implements Map, Cloneable, Serializable
+
+A Hashtable is an array of list.
+Each list is known as a bucket.
+The position of bucket is identified by calling the hashcode() method.
+A Hashtable contains values based on the key.
+It contains only unique elements.
+It may have not have any null key or value.
+It is synchronized.
+It is a legacy class
+
 ---------------------------------------- HASHTABLE ---------------------------------------------------------------------
 
 - It is similar to HashMap except it is synchronized
@@ -39,3 +100,6 @@ Sorting
 - Enumerator for the Hashtable is not fail-fast.
 fail-fast means: When calling iterator.next(), if any modification has been made between the moment the iterator was created and the moment next() is called, a ConcurrentModificationException is immediately thrown.
 
+----------------------------------------- REFERENCES -------------------------------------------------------------------
+
+https://www.geeksforgeeks.org/differences-treemap-hashmap-linkedhashmap-java/
