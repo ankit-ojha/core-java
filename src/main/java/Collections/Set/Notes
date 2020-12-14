@@ -1,15 +1,16 @@
 A Set is a Collection that cannot contain duplicate elements.
 There are three main implementations of Set interface: HashSet, TreeSet, and LinkedHashSet
 HashSet, which stores its elements in a hash table, is the best-performing implementation; however it makes no guarantees concerning the order of iteration.
-TreeSet, which stores its elements in a red-black tree, orders its elements based on their values;it is substantially slower than HashSet.
 LinkedHashSet, which is implemented as a hash table with a linked list running through it, orders its elements based on the order in which they were inserted into the set (insertion-order).
-
+TreeSet, which stores its elements in a red-black tree, orders its elements based on their values;it is substantially slower than HashSet.
 
 --------------------------------------------- COMPARISON ------------------------------------------------------------------
 
 1. Synchronization
 
 All 3 are not synchronized. It should not be used in multi threaded application
+
+synchronizedSet method is used to synchronize
 
 Set s = Collections.synchronizedSet(new HashSet(...));
 Set s = Collections.synchronizedSet(new LinkedHashSet(...));
