@@ -13,7 +13,7 @@ For mutable strings, you can use StringBuffer and StringBuilder classes.
 -----------------------------------------------Creating a String & Memory Allocation  ----------------------------------
 - String objects are stored in a special memory area known as the "string constant pool".
 
-- Strings.Strings can be created using 2 ways
+- Strings can be created using 2 ways
 1. String literal (String s="welcome";)
 2. new keyword
 

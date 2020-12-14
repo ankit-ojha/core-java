@@ -31,9 +31,3 @@ Handling Exception
 throw is used to explicitly throw a single exception
 throws is used in the method declaration
 throws can be used for multiple exceptions
-
-
-
-
-
-
