@@ -1,4 +1,3 @@
-/*
 ------------------------------------------------------------------------------------------------------------------------
 
 - Encapsulation simply means binding object state(fields) and behavior(methods) together.
@@ -12,7 +11,13 @@ If you are creating class, you are doing encapsulation.
 2. Have getter setter methods public
 
 - It is also known as data hiding as the member variables are private and cannot be accessed from outside class
-- It is combination of data hiding and abstraction
 - You can create read only and/or write only classes by providing either getter and/or setter methods
 
- */
+
+------------------------------------ ENCAPSULATION VS ABSTRACTION ------------------------------------------------------
+
+- Encapsulation wraps data and methods into single unit to secure the data from outside world
+Vs Abstraction allows you to focus on what the object does instead of how it does it
+- Implementation Level Vs Design Level
+- Implemented Using Access Modifiers Vs Implemented Using Abstract Class and Interface
+- How it should be done Vs What should be done
