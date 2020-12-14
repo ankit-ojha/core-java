@@ -4,12 +4,54 @@ Elements can be inserted or accessed by their position in the list, using a zero
 
 --------------------------------------------ARRAYLIST-------------------------------------------------------------------
 
+Definition
 - ArrayList is a class that implements List interface
-- ArrayList size can grow and shrink dynamically, hence it has advantage over Arrays
 - It uses an array to implement a list, hence the name arraylist
-- Sorting of ArrayList<Object> is done using Comparable Interface (implements Comparable interface and override compareTo() and toString())
-- ArrayList are not thread-safe and should not be used in the multi threaded environment
-- Two ways to apply synchronization
+- ArrayList size can grow and shrink dynamically, hence it has advantage over Arrays
+- Not thread-safe hence should not be used in the multi threaded environment
+
+- Initialization
+
+1. ArrayList<Type> obj = new ArrayList<Type>(Arrays.asList(Object o1, Object o2, Object o3, ....so on));
+2. ArrayList<T> obj = new ArrayList<T>(){{
+   		   add(Object o1);
+   		   add(Object o2);
+   		   add(Object o3);
+                      ...
+                      ...
+   		   }};
+3. ArrayList<T> obj = new ArrayList<T>();
+   	   obj.add("Object o1");
+   	   obj.add("Object o2");
+   	   obj.add("Object o3");
+                           ...
+                           ...
+4. ArrayList<T> obj = new ArrayList<T>(Collections.nCopies(count, element));
+ArrayList<Integer> intlist = new ArrayList<Integer>(Collections.nCopies(10, 5));
+Output:: [5, 5, 5, 5, 5, 5, 5, 5, 5, 5]
+
+- Looping
+
+1.  for (int counter = 0; counter < arrlist.size(); counter++) {
+             System.out.println(arrlist.get(counter));
+    }
+2. for (Integer num : arrlist) {
+              System.out.println(num);
+    }
+3. while (arrlist.size() > count) {
+   	 System.out.println(arrlist.get(count));
+            count++;
+   }
+4. Iterator iter = arrlist.iterator();
+         while (iter.hasNext()) {
+          System.out.println(iter.next());
+  }
+5. Enumeration<String> e = Collections.enumeration(arrayList);
+while(e.hasMoreElements())
+      System.out.println(e.nextElement());
+
+
+- Synchronization
 1. List<String> syncal = Collections.synchronizedList(new ArrayList<String>());
     synchronized(syncal) {
            Iterator<String> iterator = syncal.iterator();
@@ -19,6 +61,7 @@ Elements can be inserted or accessed by their position in the list, using a zero
 2. CopyOnWriteArrayList : thread-safe variant of ArrayList
 CopyOnWriteArrayList<String> al = new CopyOnWriteArrayList<String>();
 
+- Sorting of ArrayList<Object> is done using Comparable Interface (implements Comparable interface and override compareTo() and toString())
 - Swapping using Collections.swap(l1, 1, 5);
 - ArrayList is Serializable by default
 - Combine two arraylist using addAll
@@ -27,7 +70,6 @@ CopyOnWriteArrayList<String> al = new CopyOnWriteArrayList<String>();
 - Check if a list if empty using isEmpty()
 - ensureCapacity(10) to increase the capacity of ArrayList
 - Length of ArrayList using size()
-
 
 --------------------------------------------LINKED LIST-----------------------------------------------------------------
 
@@ -71,6 +113,44 @@ High in LinkedList as it contains element data and two pointers for neighbour no
 
 LinkedList should be used when you want to perform data manipulation, while ArrayList should be used when you want to store the data and access it
 
+-------------------------------------- ArrayList Vs Vector -------------------------------------------------------------
+
+1. Synchronization
+> Not Vs Is
+ArrayList is not sync while Vector is
+
+2. Resize
+
+> Half Vs Double
+Both ArrayList and Vector can grow and shrink dynamically to maintain the optimal use of storage, however the way they resized is different.
+ArrayList grow by half of its size when resized while Vector doubles the size of itself by default when grows.
+
+3. Performance
+
+AL: Better (as it is not sync)
+
+4. Fail-Fast
+
+AL is Fail Fast and Vector is not
+
+-------------------------------------- ArrayList Vs HashMap ------------------------------------------------------------
+
+1. Implementation
+> AL uses List Interface and HashMap used Map Interface
+
+2. Memory
+Low Vs High
+> AL uses element value alone and maintains internally the index of each element
+> HM stores key and value pair (both), hence more memory
+
+3. Order
+> Insertion Order Vs No Order
+
+4. Duplicates
+> Allows Vs Not
+
+5. Nulls
+> Any Number of nulls Vs One null key with any number of null values
 
 -------------------------------------------- REFERENCES ----------------------------------------------------------------
 
