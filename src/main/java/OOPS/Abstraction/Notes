@@ -11,9 +11,10 @@ what happens when you press login, how the input data sent to server, how it get
 
 1. 'abstract' keyword while defining the class
 2. Abstract class cannot be instantiated (i.e. You cannot do new())
-3. It can have abstract and non-abstract (concrete) methods
-4. It can have constructors and static methods
-5. It can have final methods
+3. It can have
+abstract and non-abstract (concrete) methods
+constructors
+static, non-static and final methods
 6. A method defined abstract must always be redefined in the subclass,thus making overriding compulsory OR either make subclass itself abstract.
 7. An abstract class can have parametrized constructors and default constructor is always present in an abstract class.
 8. If a class has at least one abstract methods, then the class must be declared as abstract

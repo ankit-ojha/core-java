@@ -17,17 +17,5 @@ Marker interface is used as a tag to inform a message to the Java compiler so th
 Java marker interface has no members in it.
 From java 1.5, the need for marker interface is eliminated by the introduction of the java annotation feature.
 
-
-
-
-
-
-
-
-
-
-
-
-
 https://www.journaldev.com/2366/core-java-interview-questions-and-answers
 https://www.edureka.co/blog/interview-questions/java-interview-questions/

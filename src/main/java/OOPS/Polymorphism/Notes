@@ -21,13 +21,12 @@ Overloading Vs Overriding
 2. Same Class Vs Sub Class
 3. Static Binding (Early Binding) Vs Dynamic Binding (Late Binding)
 Overriding: JVM determines the proper method to call at the runtime, not at the compile time. It is also called dynamic or late binding.
-4. Static Methods can be overloaded but not overridden
-5. Overloading - Better Performance
-6. private and final methods can be overloaded but not overridden
-7. Argument must be different Vs Arguments must be same
-8. Same return Type Vs Specific (Covariant Return Types)
-9. You can widen the access modifier while overriding (parent class - protected, child class - public)
-10. Type Promotion happens in Overloading (Below runs fine, No Compilation Error)
+4. Overloading - Better Performance
+5. private, static and final methods can be overloaded but not overridden
+6. Argument must be different Vs Arguments must be same
+7. Same return Type Vs Specific (Covariant Return Types)
+8. You can widen the access modifier while overriding (parent class - protected, child class - public)
+9. Type Promotion happens in Overloading (Below runs fine, No Compilation Error)
 
 float to double
 short to int
@@ -49,12 +48,12 @@ class Demo{
    }
 }
 
-11. Resolved by Compiler Vs Resolved by JVM
-12. Fast Vs Slow
-13. Overloading
+10. Resolved by Compiler Vs Resolved by JVM
+11. Fast Vs Slow
+12. Overloading
 A. Number of Arguments
 B. Order of Arguments
 C. Data Types of Arguments
 
-14. More than one method with same name and argument list cannot be given in a class even though their return type is different.
+13. More than one method with same name and argument list cannot be given in a class even though their return type is different.
 Method return type does not matter in case of overloading.
