@@ -1,0 +1,76 @@
+- A thread is a lightweight sub-process, the smallest unit of processing.
+- A thread is a series of executed statements
+- Each thread has its own program counter, stack and local variables
+- It allows multiple activities within a single process
+- A thread is a nested sequence of method calls
+- The Java Virtual Machine allows an application to have multiple threads of execution running concurrently.
+- Every Java Program has at least 1 thread (main thread)
+- Multithreading is a Java feature that allows concurrent execution of two or more parts of a program for maximum utilization of CPU.
+Each part of such program is called a thread. So, threads are light-weight processes within a process.
+
+---------------------------------------------------Thread Creation------------------------------------------------------
+
+1. Extending Thread Class
+2. Implementing Runnable Interface
+
+---------------------------------------------------Thread Priority------------------------------------------------------
+
+- When a Java thread is created, it inherits its priority from the thread that created it.
+    You can modify a thread’s priority at any time after its creation using the setPriority method.
+        Thread priorities are integers ranging between MIN_PRIORITY (1) and MAX_PRIORITY (10) .
+            The higher the integer, the higher the priority.Normally the thread priority will be 5.
+
+---------------------------------------------------Thread Scheduling ---------------------------------------------------
+
+Execution of multiple threads on a single CPU, in some order, is called scheduling.
+In general, the runnable thread with the highest priority is active (running)
+Java is priority-preemptive
+    If a high-priority thread wakes up, and a low-priority thread is running
+        Then the high-priority thread gets to run immediately
+
+
+Types:
+
+Waiting & Notifying provides means of communication between threads that synchronize on the same object.
+
+
+
+-------------------------------------------- THREAD LIFE CYCLE ---------------------------------------------------------
+
+- 5 states
+- New, Runnable, Running, Non-Runnable (Blocked), Terminated
+
+- New: Create an instance of a thread before the invocation of start()
+- Runnable: After Invocation of start(). Thread Scheduler has not yet selected this thread
+- Running - Thread Selector has selected this thread now
+- Blocked - Thread is alive, but not eligible to run [Ex.Thread.sleep() / wait()]
+- Terminated - run() exits
+
+--------------------------------------------- ENDING THREAD ------------------------------------------------------------
+
+1. when the run() method finishes its execution.
+2. When the thread throws an Exception or Error that is not being caught in the program.
+3. Java program completes or ends.
+4. Another thread calls stop() methods.
+
+--------------------------------------------- SYNCHRONIZATION ----------------------------------------------------------
+
+- In many cases concurrently running threads share data and two threads try to do operations on the same variables at the same time.
+    This often results in corrupt data as two threads try to operate on the same data.
+
+
+- A popular solution is to provide some kind of lock primitive.
+    Only one thread can acquire a particular lock at any particular time.
+        This can be achieved by using a keyword “synchronized” .
+
+- By using the synchronize only one thread can access the method at a time
+    and a second call will be blocked until the first call returns or wait() is called inside the synchronized method.
+
+---------------------------------------------- DEADLOCK ----------------------------------------------------------------
+
+Whenever there is multiple processes contending for exclusive access to multiple locks,
+    there is the possibility of deadlock.
+
+A set of processes or threads is said to be deadlocked when each is waiting for an action that only one of the others can perform.
+    In Order to avoid deadlock, one should ensure that when you acquire multiple locks,
+        you always acquire the locks in the same order in all threads.
